@@ -13,6 +13,8 @@ service.print = (value, serialize) => {
   let fnData = '';
   let evaluatedValue = '';
   try {
+    // called with empty object as param as some code uses function calls with params
+    // and the param may be from an object where destructuring is used.
     evaluatedValue = value({}, {}, {}, {}, {});
     if (evaluatedValue && typeof evaluatedValue !== 'string') {
       fnData = `() => (${serialize(evaluatedValue)})`;
@@ -25,14 +27,15 @@ service.print = (value, serialize) => {
 };
 
 /**
- * Function tester
+ * Specific tester.
+ * This function exist just to support consistent model for every micro-serialiser.
  *
  * @return {Boolean} alwaysTrue
  */
 service.testFunction = () => (true);
 
 /**
- * Test for function with specific
+ * Tester. Uses generic function tested and specific tester.
  *
  * @param {*} value - value tested
  * @return {Boolean} isFunction

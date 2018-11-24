@@ -14,7 +14,8 @@ service.print = (name) => {
 };
 
 /**
- * Test for function
+ * Test for function.
+ * This function will be used by every micro-serialiser.
  *
  * @param {*} value - value tested
  * @return {Boolean} isFunction

@@ -3,7 +3,7 @@ import utils from 'utils';
 const service = {};
 
 /**
- * Prints string for sinon mock
+ * Prints string for sinon mock.
  *
  * @param {Function} value - function tested
  * @param {String} value.displayName - function name
@@ -20,7 +20,8 @@ service.print = (value) => {
 };
 
 /**
- * Test for sinon mock, value is a function
+ *
+ * Test for sinon mock, value is a function.
  *
  * @param {Function} value - value tested
  * @param {Boolean} [value.isSinonProxy] - flag as it is exposed by sinon when function is mocked
@@ -31,7 +32,7 @@ service.testFunction = (value) => (
 );
 
 /**
- * Test for sinon mock
+ * Tester. Uses generic function tested and specific tester.
  *
  * @param {*} value - value tested
  * @return {Boolean} isSinonMock

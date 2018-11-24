@@ -3,7 +3,7 @@ import utils from 'utils';
 const service = {};
 
 /**
- * Prints string for jest mock
+ * Prints string for the jest mock.
  *
  * @param {Function} value - function tested
  * @param {Function} value.getMockName - getter that returns function name
@@ -20,7 +20,7 @@ service.print = (value) => {
 };
 
 /**
- * Test for jest mock, value is a function
+ * Test for jest mock, value is a function.
  *
  * @param {Function} value - value tested
  * @param {Boolean} [value._isMockFunction] - flag as it is exposed by jest when function is mocked
@@ -31,7 +31,7 @@ service.testFunction = (value) => (
 );
 
 /**
- * Test for jest mock
+ * Tester. Uses generic function tested and specific tester.
  *
  * @param {*} value - value tested
  * @return {Boolean} isJestMock

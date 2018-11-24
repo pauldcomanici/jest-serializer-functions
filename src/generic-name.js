@@ -1,5 +1,11 @@
 import utils from 'utils';
 
+/**
+ * Serialise generator based on specified property
+ *
+ * @param {String} propName - property name from function
+ * @return {Object} snapshotSerialiser
+ */
 const generator = (propName) => {
   const service = {};
 
@@ -14,7 +20,7 @@ const generator = (propName) => {
   );
 
   /**
-   * Test for display name property on function
+   * Test for property name on function
    *
    * @param {Function} value - value tested
    * @return {Boolean} isWithTruthyPropValue
@@ -24,7 +30,7 @@ const generator = (propName) => {
   );
 
   /**
-   * Test for jest mock
+   * Tester. Uses generic function tested and specific tester.
    *
    * @param {*} value - value tested
    * @return {Boolean} isFunctionWithTruthyPropValue
@@ -32,6 +38,8 @@ const generator = (propName) => {
   service.test = (value) => (
     utils.test(value) && service.testFunction(value)
   );
+
+  return service;
 };
 
 export default generator;
