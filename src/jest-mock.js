@@ -1,4 +1,4 @@
-import utils from 'utils';
+import utils from './utils';
 
 const service = {};
 
@@ -10,9 +10,8 @@ const service = {};
  * @return {String} serializedFunction
  */
 service.print = (value) => {
-  let fnName = '';
-  const mockedFnName = value.getMockName();
-  if (mockedFnName === 'jest.fn()') {
+  let fnName = value.getMockName && value.getMockName();
+  if (fnName === 'jest.fn()') {
     fnName = '';
   }
 

@@ -1,4 +1,4 @@
-import utils from 'utils';
+import utils from './utils';
 
 const service = {};
 
@@ -41,7 +41,7 @@ service.testFunction = () => (true);
  * @return {Boolean} isFunction
  */
 service.test = (value) => (
-  utils.test(value) && service.testFunction(value)
+  utils.test(value)
 );
 
 export default service;

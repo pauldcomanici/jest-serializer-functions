@@ -1,9 +1,9 @@
-import utils from 'utils';
-import sinonMock from 'sinon-mock';
-import jestMock from 'jest-mock';
-import keyDisplayName from 'key-display-name';
-import keyName from 'key-name';
-import evaluate from 'evaluate';
+import utils from './utils';
+import sinonMock from './sinon-mock';
+import jestMock from './jest-mock';
+import keyDisplayName from './key-display-name';
+import keyName from './key-name';
+import evaluate from './evaluate';
 
 const service = {};
 

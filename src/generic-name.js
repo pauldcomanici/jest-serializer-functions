@@ -1,4 +1,4 @@
-import utils from 'utils';
+import utils from './utils';
 
 /**
  * Serialise generator based on specified property
