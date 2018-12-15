@@ -1,8 +1,10 @@
 # Changelog
 
+
 > **Tags:**
 > - :boom:       [Breaking Change]
 > - :rocket:     [New Feature]
+> - :lollipop:   [Enhancement]
 > - :bug:        [Bug Fix]
 > - :memo:       [Documentation]
 > - :house:      [Internal]

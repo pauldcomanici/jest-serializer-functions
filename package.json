@@ -13,8 +13,10 @@
     "@babel/preset-env": "7.2.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "23.6.0",
+    "codecov": "3.1.0",
     "eslint": "5.10.0",
-    "jest": "23.6.0"
+    "jest": "23.6.0",
+    "rimraf": "2.6.2"
   },
   "peerDependencies": {},
   "scripts": {
@@ -24,12 +26,15 @@
     "prepublishOnly": "npm run build",
     "report-coverage": "codecov",
     "test": "jest --no-cache --config=./config/jest-ut.json",
+    "test-e2e": "jest --no-cache --config=./config/jest-ut.json",
+    "test-e2e-latest": "npm run compile && npm run test-e2e",
     "test-watch": "npm run test -- --watch",
     "test-coverage": "npm run test -- --coverage"
   },
   "keywords": [
     "jest",
     "jest-serializer",
+    "jest-serializer-functions",
     "serializer",
     "snapshot",
     "snapshotSerializer",
