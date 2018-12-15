@@ -1,0 +1,9 @@
+{
+  "testRegex": "/tests/.*\\.test\\.js$",
+  "rootDir": "./../__e2e__/",
+  "automock": false,
+  "verbose": false,
+  "snapshotSerializers": [
+    "./../lib/index.js"
+  ]
+}

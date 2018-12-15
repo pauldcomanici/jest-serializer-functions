@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fixtures - jest mock function used as prop 1`] = `
+Object {
+  "anonymous": [Function],
+  "arrow": [Function],
+  "named": [Function],
+}
+`;
