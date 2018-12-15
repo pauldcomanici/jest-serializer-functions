@@ -47,7 +47,57 @@
 
 
 # jest-serializer-functions
-Jest snapshot serializer for functions. Reade more about [snapshotSerializers](https://jestjs.io/docs/en/configuration.html#snapshotserializers-array-string)
+Jest snapshot serializer for functions. Read more about [snapshotSerializers](https://jestjs.io/docs/en/configuration.html#snapshotserializers-array-string)
+
+## Background
+Whenever you are using Jest for snapshot you may notice that functions will appear in snapshots in different ways.
+If the function is mocked you will see it as:
+* `[Function]`
+  * when the function is not mocked with Jest
+  * when you have React component that has a function inside JSX (consumers) 
+* `[MockFunction]`
+  * when the function is mocked with jest, usually implementation is: `myFn = jest.fn()`
+* `[MockFunction <<function-name>>]`
+  * where `<<function-name>>` is the name of the function
+* ```[MockFunction] {calls: [] results: []}```
+  * when the mocked function was called previously
+  
+### How it works
+This serializer will help you have a more consistent way of viewing functions as every time will return `[Function]` as the base.
+
+If the function has a name it will serialize it as `[Function] <<function-name>>`.
+As the part where the function is mocked or not just adds noise to the important part.
+
+Now the good part :astonished: is when you are using this serialiser
+with (React)[https://www.npmjs.com/package/react] (and [enzyme](https://www.npmjs.com/package/enzyme))
+as it will improve what you can see in the snapshot. Take as example source code:
+```jsx
+<Context.Consumer>
+  {
+    (handler) => (
+      <Subscriber
+        handler={handler
+      />
+    )
+  }
+</Context.Consumer>
+```
+this will result in a snapshot that will look like:
+```jsx
+<Context.Consumer>
+  [Function]
+</Context.Consumer>
+```
+I would not say this is very helpful (if I change something from the function nothing will break in my snapshot).
+This serializer will return:
+
+```jsx
+<Context.Consumer>
+  () => (<Subscriber
+    handler={handler}
+  />)
+</Context.Consumer>
+```
 
 ## Installation
 ```sh
@@ -62,13 +112,44 @@ yarn add --dev jest-serializer-functions
 
 ### Having jest config as json
 ```json
+// jest.json
 {
   ...
-  "snapshotSerializers":[
+  "snapshotSerializers": [
     "jest-serializer-functions"
   ],
   ...
 }
 ```
 
-npm i --save-dev babel-jest @babel/core babel-core@7.0.0-bridge.0
+### Having jest config as json inside package.json
+```json
+// package.json
+{
+  ...
+  "jest": {
+    ...
+    "snapshotSerializers": [
+      "jest-serializer-functions"
+    ],
+    ...
+  },
+  ...
+}
+```
+
+## Take into consideration
+
+> Everything has pros & cons.
+
+### Pros
+This serializer will help you with a better understanding of your functions and fail tests that until now passed when doing partial refactoring.
+
+### Cons
+The time to execute your tests will increase (depending on how many snapshots you have like this).
+
+The space used by snapshot will increase, as more data will be stored.
+
+## Contributing
+
+Pull requests and issues are welcome :heart:.

@@ -11,5 +11,5 @@
 > - :nail_care:  [Polish]
 
 
-## v0.1.0
-* :house: Initial set-up
+## v1.0.0
+* :house: Initial implementation
