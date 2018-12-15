@@ -34,3 +34,9 @@ service.test = (value) => (
 );
 
 export default service;
+
+// use module.exports for it to work with jest (it does not work with `export default` ...)
+module.exports = {
+  print: service.print,
+  test: service.test,
+};
