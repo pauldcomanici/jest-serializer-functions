@@ -4,6 +4,7 @@ module.exports = function (api) {
   api.cache.never();
 
   const envConfig = {
+    modules: 'commonjs',
     targets: {
       node: true,
     },
