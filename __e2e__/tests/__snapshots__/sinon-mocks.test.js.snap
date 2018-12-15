@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fixtures - sinon mock dynamic - function used as prop 1`] = `
+Object {
+  "fn": [Function] x,
+  "spy": [Function],
+  "stub": [Function] myNamedFunction,
+}
+`;
+
+exports[`fixtures - sinon mock static - function used as prop 1`] = `
+Object {
+  "anonymous": [Function],
+  "arrow": [Function],
+  "named": [Function] named,
+}
+`;

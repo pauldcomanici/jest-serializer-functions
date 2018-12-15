@@ -9,4 +9,6 @@ fixtures.awesomeObj = {
   named: service.myNamedFunction,
 };
 
+fixtures.awesomeFn = (obj) => (obj);
+
 export default fixtures;

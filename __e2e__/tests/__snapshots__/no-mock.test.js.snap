@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fixtures - no mock function used as prop 1`] = `
+exports[`fixtures - no mock dynamic - function used as prop 1`] = `
+Object {
+  "ann": [Function] ann,
+  "arr": [Function] arr,
+  "fn": [Function] x,
+}
+`;
+
+exports[`fixtures - no mock static - function used as prop 1`] = `
 Object {
   "anonymous": [Function],
   "arrow": [Function],
