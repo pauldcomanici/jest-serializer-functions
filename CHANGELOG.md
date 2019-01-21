@@ -11,5 +11,12 @@
 > - :nail_care:  [Polish]
 
 
+
+## v1.0.1
+* :house: Update dependencies
+:house: add badge for paypal donate
+:house: add badge for patreon support
+
+
 ## v1.0.0
 * :house: Initial implementation
