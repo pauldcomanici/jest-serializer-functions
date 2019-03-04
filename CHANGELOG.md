@@ -12,6 +12,10 @@
 
 
 
+## v1.0.2
+* :house: Update dependencies
+
+
 ## v1.0.1
 * :house: Update dependencies
 :house: add badge for paypal donate
