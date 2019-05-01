@@ -11,6 +11,7 @@
       src="https://codecov.io/gh/darkyndy/jest-serializer-functions/branch/master/graph/badge.svg"
     />
   </a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fdarkyndy%2Fjest-serializer-functions?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdarkyndy%2Fjest-serializer-functions.svg?type=shield"/></a>
   <a href="https://snyk.io/test/github/darkyndy/jest-serializer-functions?targetFile=package.json">
     <img
       alt="Known Vulnerabilities"
@@ -58,6 +59,9 @@
   </a>
 </p>
 
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdarkyndy%2Fjest-serializer-functions.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdarkyndy%2Fjest-serializer-functions?ref=badge_large)
 
 # jest-serializer-functions
 Jest snapshot serializer for functions. Read more about [snapshotSerializers](https://jestjs.io/docs/en/configuration.html#snapshotserializers-array-string)
