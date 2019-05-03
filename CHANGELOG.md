@@ -11,6 +11,11 @@
 > - :nail_care:  [Polish]
 
 
+## v1.0.4
+* :bug: Fix postinstall script
+* :house: Integrate fossa for license checks
+
+
 ## v1.0.3
 * :house: Update dependencies
 * :house: Add postinstall script
