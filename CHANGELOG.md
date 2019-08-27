@@ -11,6 +11,10 @@
 > - :nail_care:  [Polish]
 
 
+## v1.0.6
+:house: Update dependencies
+
+
 ## v1.0.5
 :house: Update dependencies
 
